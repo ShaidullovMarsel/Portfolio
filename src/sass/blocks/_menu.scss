@@ -1,0 +1,108 @@
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: rgb(21, 24, 18);
+    }
+    span.long {
+        width: 36px;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block {
+        position: relative;
+        width: 345px;
+        height: 100%;
+        background-color: $main-color;
+        transition: all 0.6s;
+        padding-top: 140px;
+        padding-left: 40px;
+        z-index: 10;
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 35px;
+    }
+    &__link {
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        margin-bottom: 15px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 100%;
+            left: -35px;
+            top: 10px;
+            transition: all 0.6s;
+        }
+        &:hover {
+            &:before {
+                background-color: #fff;
+            }
+        }
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            &:hover {
+                filter: opacity(80%);
+            }
+        }
+    }
+    &__social {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0.75;
+
+    }
+}
