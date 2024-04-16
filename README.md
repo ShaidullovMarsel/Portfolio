@@ -8,14 +8,14 @@
 ## Запуск проекта:
 * Склонировать проект на ваш компьютер с Github с помощью команды:
 ```
-git clone https://github.com/FilimonovAlexey/link-bio-page.git
+git clone https://github.com/joker325713/Portfolio.git
 ```
 
 * Установить зависимости с помощью команды:
 ```
-npm install
+npm i
 ```
 * Запустить проект с помощью команды:
 ```
-npm run start
+gulp
 ```
